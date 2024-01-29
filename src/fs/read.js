@@ -10,7 +10,7 @@ const read = async () => {
   const msgError = "FS operation failed";
 
   try {
-    const fileContent = await readFile(src);
+    const fileContent = await readFile(src, "utf-8");
     console.log(fileContent);
   } catch (err) {
     throw new Error(msgError);
